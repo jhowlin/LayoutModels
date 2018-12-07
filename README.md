@@ -50,4 +50,4 @@ The included Swift playground demonstrates the Layout Model pattern in an extrem
 
 ## Additional Resources
 
-
+Coming soon.
