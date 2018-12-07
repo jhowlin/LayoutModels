@@ -8,13 +8,35 @@
 
 import UIKit
 
+class PostCellWithAutoLayout:UITableViewCell {
+    
+    let postView = PostViewWithAutoLayout()
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.addSubview(postView)
+        postView.translatesAutoresizingMaskIntoConstraints = false
+        selectionStyle = .none
+        let constraints = [
+            postView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            postView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            postView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: postView.bottomAnchor, constant: 0)
+        ]
+        NSLayoutConstraint.activate(constraints)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 public class PostViewWithAutoLayout: UIView {
 
     var avatarImageView = UIImageView()
     var userNameLabel = UILabel()
     var optionsButton = UIButton()
     var postedImageView = UIImageView()
-    var postedImage: UIImage?
     var heartButton = UIButton()
     var commentButton = UIButton()
     var replyButton = UIButton()

@@ -42,13 +42,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func onPostsFeedLayoutModel() {
         
-        let vc = PostsFeedTableViewController(layoutMethod:.layoutModel)
+        let vc = PostsTableViewController(layoutMethod:.layoutModel)
         (window!.rootViewController as! UINavigationController).pushViewController(vc, animated: true)
     }
     
     func onPostsSizingCell() {
         
-        let vc = PostsFeedTableViewController(layoutMethod:.sizingCell)
+        let vc = PostsTableViewController(layoutMethod:.sizingCell)
         (window!.rootViewController as! UINavigationController).pushViewController(vc, animated: true)
     }
 }

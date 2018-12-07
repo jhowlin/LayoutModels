@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 struct PostDataModel {
+    
     let comment:String
     let url:String
     let userName:String

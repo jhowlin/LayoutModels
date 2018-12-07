@@ -23,10 +23,10 @@ class PostsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     var tableView = UITableView(frame: .zero, style: .plain)
     var loadingView = UIView(frame: .zero)
     var loadingSpinner = UIActivityIndicatorView(style: .gray)
-    let cellReuseID = "PhotoPostCell"
+    let cellReuseID = "PostCell"
     let imageDownloadSize = CGSize(width: 800, height: 600)
     var postInfos:[PostViewInfo] = [] // used for manual layout mode
-    var posts:[PostModel] = [] // used for sizing cell mode
+    var posts:[PostDataModel] = [] // used for sizing cell mode
     let sizingCell = PostViewWithAutoLayout()
     var isLoading = false
     var layoutMethod = LayoutMethod.layoutModel
@@ -90,8 +90,7 @@ class PostsTableViewController: UIViewController, UITableViewDelegate, UITableVi
             tableView.register(PostCellWithAutoLayout.self, forCellReuseIdentifier: cellReuseID)
         }
 
-        
-        let button = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(onClearCache))
+        let button = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(onClearImagesCache))
         navigationItem.rightBarButtonItems = [button]
         
         title = layoutMethod.rawValue
@@ -112,7 +111,7 @@ class PostsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         self.loadingView.isHidden = true
     }
     
-    @objc func onClearCache() {
+    @objc func onClearImagesCache() {
         ImageFetcherController.shared.clearCaches()
     }
     
@@ -135,7 +134,7 @@ class PostsTableViewController: UIViewController, UITableViewDelegate, UITableVi
             DispatchQueue.global().async {
                 
                 let createViewModelAndLayout:() -> PostViewInfo = {
-                    let post = PostModel.createModel(imageURL: url)
+                    let post = PostDataModel.createModel(imageURL: url)
                     let model = PostViewModel(userName: post.userName, topComment: post.comment, imageURL: url, guid:post.guid, commentOne:post.commentOne, commentTwo:post.commentTwo, date:post.date)
                     let layout = PostLayoutModel(viewModel: model)
                     layout.prepareLayoutForWidth(width: width)
@@ -154,7 +153,7 @@ class PostsTableViewController: UIViewController, UITableViewDelegate, UITableVi
                 
                 if self.useParallelModelCreation {
                     var result = Array<PostViewInfo?>(repeating: nil, count: numItems)
-                    let q = DispatchQueue(label: "sync queue")
+                    let q = DispatchQueue(label: "q")
                     DispatchQueue.concurrentPerform(iterations: numItems) { idx in
                         let info = createViewModelAndLayout()
                         q.sync { result[idx] = info }
@@ -178,7 +177,7 @@ class PostsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         case .sizingCell:
             let itemStart = self.posts.count
             for _ in itemStart..<itemStart + numItems {
-                let post = PostModel.createModel(imageURL: url)
+                let post = PostDataModel.createModel(imageURL: url)
                 self.posts.append(post)
             }
             completion()
@@ -254,7 +253,7 @@ class PostsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         switch layoutMethod {
         case .layoutModel:
-             return postInfos.count
+            return postInfos.count
         case .sizingCell:
             return posts.count
         }
@@ -314,7 +313,6 @@ class PostsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         let req = ImageFetcherRequest(url: model.imageURL, identifier: guid, isLowPriority:isLowPriority, sizeMetrics:sizeMetrics)
         return req
     }
-    
     
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         for indexPath in indexPaths {

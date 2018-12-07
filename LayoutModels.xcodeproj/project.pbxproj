@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9649522C219069C5001CAB79 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9649522B219069C5001CAB79 /* PostModel.swift */; };
+		9649522C219069C5001CAB79 /* PostDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9649522B219069C5001CAB79 /* PostDataModel.swift */; };
 		968804B620DE31EF00135695 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968804B520DE31EF00135695 /* Logger.swift */; };
-		968804B820DE353B00135695 /* PostsFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968804B720DE353B00135695 /* PostsFeedTableViewController.swift */; };
+		968804B820DE353B00135695 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968804B720DE353B00135695 /* PostsTableViewController.swift */; };
 		96926CFA21B9451F0092EDF0 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96926CF921B9451F0092EDF0 /* PopoverViewController.swift */; };
 		96BF7C672194721B001F4C25 /* ImageFetcherMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF7C5F2194721A001F4C25 /* ImageFetcherMetrics.swift */; };
 		96BF7C682194721B001F4C25 /* ImageFetcherDownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF7C602194721A001F4C25 /* ImageFetcherDownloadOperation.swift */; };
@@ -25,13 +25,16 @@
 		FC2DF8DD20000C020078CE30 /* Arbitrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DF8D920000C020078CE30 /* Arbitrary.swift */; };
 		FC2DF8E020000C4A0078CE30 /* StringMeasuring.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DF8CC20000BFC0078CE30 /* StringMeasuring.swift */; };
 		FC2DF8EB20000D370078CE30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2DF8D720000BFE0078CE30 /* Images.xcassets */; };
-		FC80BB592050B39E009B1D30 /* PhotoPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80BB582050B39E009B1D30 /* PhotoPostView.swift */; };
+		FC80BB592050B39E009B1D30 /* PostViewWithAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80BB582050B39E009B1D30 /* PostViewWithAutoLayout.swift */; };
+		FC9D8CAA21BABAFA00ECE123 /* PostLayoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9D8CA921BABAFA00ECE123 /* PostLayoutModel.swift */; };
+		FC9D8CAC21BABB3A00ECE123 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9D8CAB21BABB3A00ECE123 /* PostViewModel.swift */; };
+		FC9D8CB021BABDA800ECE123 /* PostViewWithLayoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9D8CAF21BABDA800ECE123 /* PostViewWithLayoutModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9649522B219069C5001CAB79 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		9649522B219069C5001CAB79 /* PostDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataModel.swift; sourceTree = "<group>"; };
 		968804B520DE31EF00135695 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		968804B720DE353B00135695 /* PostsFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsFeedTableViewController.swift; sourceTree = "<group>"; };
+		968804B720DE353B00135695 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		96926CF921B9451F0092EDF0 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		96BF7C5F2194721A001F4C25 /* ImageFetcherMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherMetrics.swift; sourceTree = "<group>"; };
 		96BF7C602194721A001F4C25 /* ImageFetcherDownloadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherDownloadOperation.swift; sourceTree = "<group>"; };
@@ -42,7 +45,7 @@
 		96BF7C652194721B001F4C25 /* ImageFetcherBaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherBaseOperation.swift; sourceTree = "<group>"; };
 		96BF7C662194721B001F4C25 /* ImageFetcherRenderOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherRenderOperation.swift; sourceTree = "<group>"; };
 		96BF7C7021999659001F4C25 /* TechPulsePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TechPulsePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		FC2DF8B420000B8B0078CE30 /* Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2DF8B420000B8B0078CE30 /* LayoutModels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayoutModels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2DF8BE20000B8B0078CE30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC2DF8C120000B8B0078CE30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC2DF8C320000B8B0078CE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,7 +53,11 @@
 		FC2DF8CC20000BFC0078CE30 /* StringMeasuring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringMeasuring.swift; sourceTree = "<group>"; };
 		FC2DF8D720000BFE0078CE30 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FC2DF8D920000C020078CE30 /* Arbitrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arbitrary.swift; sourceTree = "<group>"; };
-		FC80BB582050B39E009B1D30 /* PhotoPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPostView.swift; sourceTree = "<group>"; };
+		FC80BB582050B39E009B1D30 /* PostViewWithAutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewWithAutoLayout.swift; sourceTree = "<group>"; };
+		FC9D8CA921BABAFA00ECE123 /* PostLayoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLayoutModel.swift; sourceTree = "<group>"; };
+		FC9D8CAB21BABB3A00ECE123 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		FC9D8CAF21BABDA800ECE123 /* PostViewWithLayoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewWithLayoutModel.swift; sourceTree = "<group>"; };
+		FCF700D921BAE07F00E802C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +108,7 @@
 		FC2DF8AB20000B8B0078CE30 = {
 			isa = PBXGroup;
 			children = (
-				FC2DF8B620000B8B0078CE30 /* Feed */,
+				FC2DF8B620000B8B0078CE30 /* Layout Models */,
 				96BF7C6F21999613001F4C25 /* Playground */,
 				FC2DF8B520000B8B0078CE30 /* Products */,
 			);
@@ -110,42 +117,70 @@
 		FC2DF8B520000B8B0078CE30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC2DF8B420000B8B0078CE30 /* Feed.app */,
+				FC2DF8B420000B8B0078CE30 /* LayoutModels.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FC2DF8B620000B8B0078CE30 /* Feed */ = {
+		FC2DF8B620000B8B0078CE30 /* Layout Models */ = {
 			isa = PBXGroup;
 			children = (
-				FC2DF8C920000BF90078CE30 /* AppDelegate.swift */,
-				FC80BB572050B36A009B1D30 /* Social Feed */,
+				FC9D8CAE21BABD7D00ECE123 /* Post Views and Cells */,
+				FC80BB572050B36A009B1D30 /* Posts Table View */,
+				FC9D8CA821BABA7400ECE123 /* Data, View, and Layout Models */,
 				96A68F1B20D5543400BF4236 /* Helpers */,
 				96BF7C5E219471FF001F4C25 /* Image Fetcher */,
+				FC9D8CAD21BABBDA00ECE123 /* Application */,
+				FCF700D921BAE07F00E802C5 /* README.md */,
+			);
+			path = "Layout Models";
+			sourceTree = "<group>";
+		};
+		FC80BB572050B36A009B1D30 /* Posts Table View */ = {
+			isa = PBXGroup;
+			children = (
+				968804B720DE353B00135695 /* PostsTableViewController.swift */,
+			);
+			path = "Posts Table View";
+			sourceTree = "<group>";
+		};
+		FC9D8CA821BABA7400ECE123 /* Data, View, and Layout Models */ = {
+			isa = PBXGroup;
+			children = (
+				9649522B219069C5001CAB79 /* PostDataModel.swift */,
+				FC9D8CA921BABAFA00ECE123 /* PostLayoutModel.swift */,
+				FC9D8CAB21BABB3A00ECE123 /* PostViewModel.swift */,
+			);
+			name = "Data, View, and Layout Models";
+			sourceTree = "<group>";
+		};
+		FC9D8CAD21BABBDA00ECE123 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				FC2DF8D720000BFE0078CE30 /* Images.xcassets */,
 				FC2DF8BE20000B8B0078CE30 /* Assets.xcassets */,
 				FC2DF8C020000B8B0078CE30 /* LaunchScreen.storyboard */,
 				FC2DF8C320000B8B0078CE30 /* Info.plist */,
+				FC2DF8C920000BF90078CE30 /* AppDelegate.swift */,
 			);
-			path = Feed;
+			name = Application;
 			sourceTree = "<group>";
 		};
-		FC80BB572050B36A009B1D30 /* Social Feed */ = {
+		FC9D8CAE21BABD7D00ECE123 /* Post Views and Cells */ = {
 			isa = PBXGroup;
 			children = (
-				968804B720DE353B00135695 /* PostsFeedTableViewController.swift */,
-				FC80BB582050B39E009B1D30 /* PhotoPostView.swift */,
-				9649522B219069C5001CAB79 /* PostModel.swift */,
+				FC80BB582050B39E009B1D30 /* PostViewWithAutoLayout.swift */,
+				FC9D8CAF21BABDA800ECE123 /* PostViewWithLayoutModel.swift */,
 			);
-			path = "Social Feed";
+			name = "Post Views and Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FC2DF8B320000B8B0078CE30 /* Feed */ = {
+		FC2DF8B320000B8B0078CE30 /* LayoutModels */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC2DF8C620000B8B0078CE30 /* Build configuration list for PBXNativeTarget "Feed" */;
+			buildConfigurationList = FC2DF8C620000B8B0078CE30 /* Build configuration list for PBXNativeTarget "LayoutModels" */;
 			buildPhases = (
 				FC2DF8B020000B8B0078CE30 /* Sources */,
 				FC2DF8B120000B8B0078CE30 /* Frameworks */,
@@ -155,9 +190,9 @@
 			);
 			dependencies = (
 			);
-			name = Feed;
+			name = LayoutModels;
 			productName = Feed;
-			productReference = FC2DF8B420000B8B0078CE30 /* Feed.app */;
+			productReference = FC2DF8B420000B8B0078CE30 /* LayoutModels.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -177,7 +212,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FC2DF8AF20000B8B0078CE30 /* Build configuration list for PBXProject "Feed" */;
+			buildConfigurationList = FC2DF8AF20000B8B0078CE30 /* Build configuration list for PBXProject "LayoutModels" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -190,7 +225,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC2DF8B320000B8B0078CE30 /* Feed */,
+				FC2DF8B320000B8B0078CE30 /* LayoutModels */,
 			);
 		};
 /* End PBXProject section */
@@ -215,18 +250,21 @@
 			files = (
 				96926CFA21B9451F0092EDF0 /* PopoverViewController.swift in Sources */,
 				968804B620DE31EF00135695 /* Logger.swift in Sources */,
-				9649522C219069C5001CAB79 /* PostModel.swift in Sources */,
+				9649522C219069C5001CAB79 /* PostDataModel.swift in Sources */,
 				96BF7C6D2194721B001F4C25 /* ImageFetcherBaseOperation.swift in Sources */,
-				968804B820DE353B00135695 /* PostsFeedTableViewController.swift in Sources */,
+				968804B820DE353B00135695 /* PostsTableViewController.swift in Sources */,
 				96BF7C6A2194721B001F4C25 /* UIImageView+ImageFetcherController.swift in Sources */,
+				FC9D8CAC21BABB3A00ECE123 /* PostViewModel.swift in Sources */,
 				FC2DF8E020000C4A0078CE30 /* StringMeasuring.swift in Sources */,
-				FC80BB592050B39E009B1D30 /* PhotoPostView.swift in Sources */,
+				FC80BB592050B39E009B1D30 /* PostViewWithAutoLayout.swift in Sources */,
 				96BF7C682194721B001F4C25 /* ImageFetcherDownloadOperation.swift in Sources */,
 				FC2DF8DD20000C020078CE30 /* Arbitrary.swift in Sources */,
 				96BF7C6C2194721B001F4C25 /* ImageFetcherController.swift in Sources */,
 				96BF7C6B2194721B001F4C25 /* ImageFetcherResizing.swift in Sources */,
+				FC9D8CB021BABDA800ECE123 /* PostViewWithLayoutModel.swift in Sources */,
 				FC2DF8DA20000C020078CE30 /* AppDelegate.swift in Sources */,
 				96BF7C672194721B001F4C25 /* ImageFetcherMetrics.swift in Sources */,
+				FC9D8CAA21BABAFA00ECE123 /* PostLayoutModel.swift in Sources */,
 				96BF7C6E2194721B001F4C25 /* ImageFetcherRenderOperation.swift in Sources */,
 				96BF7C692194721B001F4C25 /* ImageFetcherRequest.swift in Sources */,
 			);
@@ -364,7 +402,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 7PB5426XF4;
-				INFOPLIST_FILE = Feed/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Layout Models/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.howlin.LayoutModels;
@@ -381,7 +419,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 7PB5426XF4;
-				INFOPLIST_FILE = Feed/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Layout Models/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.howlin.LayoutModels;
@@ -394,7 +432,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FC2DF8AF20000B8B0078CE30 /* Build configuration list for PBXProject "Feed" */ = {
+		FC2DF8AF20000B8B0078CE30 /* Build configuration list for PBXProject "LayoutModels" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC2DF8C420000B8B0078CE30 /* Debug */,
@@ -403,7 +441,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC2DF8C620000B8B0078CE30 /* Build configuration list for PBXNativeTarget "Feed" */ = {
+		FC2DF8C620000B8B0078CE30 /* Build configuration list for PBXNativeTarget "LayoutModels" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC2DF8C720000B8B0078CE30 /* Debug */,

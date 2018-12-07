@@ -13,19 +13,16 @@ import UIKit
 
 enum LogArgument:String {
     case logGeneral = "LOG_GENERAL"
-    case logFPS = "LOG_FPS"
 }
 
 @objcMembers
 class Logger:NSObject {
-
 
     var generalLogger = OSLog(subsystem: "Feed Default", category: "General")
     var startCurrentDequeueCell = CFAbsoluteTimeGetCurrent()
     var startCalculateModels = CFAbsoluteTimeGetCurrent()
     var startHeight = CFAbsoluteTimeGetCurrent()
     var startViewLoad = CFAbsoluteTimeGetCurrent()
-    
     
     static let shared:Logger = Logger()
 
@@ -144,18 +141,4 @@ class FPSLogger {
         displayLink?.invalidate()
     }
 }
-
-
-func randomImageURL(width:CGFloat, height:CGFloat) -> String {
-    let url = "https://picsum.photos/\(Int(width))/\(Int(height))/?random"
-    return url
-}
-
-func measure(id:String, block:()->()) {
-    let now = CFAbsoluteTimeGetCurrent()
-    block()
-    let duration = (CFAbsoluteTimeGetCurrent() - now) * 1000
-    print("\(id) took \(String(format: "%.2f", duration)) ms")
-}
-
 
