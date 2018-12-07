@@ -57,7 +57,7 @@
 		FC9D8CA921BABAFA00ECE123 /* PostLayoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLayoutModel.swift; sourceTree = "<group>"; };
 		FC9D8CAB21BABB3A00ECE123 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		FC9D8CAF21BABDA800ECE123 /* PostViewWithLayoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewWithLayoutModel.swift; sourceTree = "<group>"; };
-		FCF700D921BAE07F00E802C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FCF700D921BAE07F00E802C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
