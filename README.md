@@ -1,5 +1,4 @@
-#  Sample Code from the TechPulse Presentation: 
-# "High-Performance Scrolling on iOS Using Layout Models"
+#  Sample Code from the TechPulse Presentation: "High-Performance Scrolling on iOS Using Layout Models"
 
 
 This project helps illustrate a way to achieve high-performance scrolling in UITableView (or UICollectionView - the concepts apply just the same). 
@@ -34,15 +33,15 @@ There is also an implementation of image fetching that is extremely efficient an
 
 Some features include:
 
-A memory and disk cache
-Decompression of images off of the main thread
-Cancelation of downloads
-Priority of downloads (useful for prefetching)
-Throttling of concurrent downloads
-Avoiding duplicate requests for same image
-Ability to crop / scale images to a target size after download in a memory efficient way
-Metrics reporting
-Separate queues for downloads and rendering from disk
+- A memory and disk cache
+- Decompression of images off of the main thread
+- Cancelation of downloads
+- Priority of downloads (useful for prefetching)
+- Throttling of concurrent downloads
+- Avoiding duplicate requests for same image
+- Ability to crop / scale images to a target size after download in a memory efficient way
+- Metrics reporting
+- Separate queues for downloads and rendering from disk
 
 ## Playground
 
