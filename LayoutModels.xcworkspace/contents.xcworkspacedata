@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/jhowlin13/Documents/Xcode_Projects/Feed copy 2/LayoutModels.xcodeproj">
+      location = "group:LayoutModels.xcodeproj">
    </FileRef>
 </Workspace>
