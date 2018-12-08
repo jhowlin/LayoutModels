@@ -47,7 +47,6 @@ extension UIImageView {
                         self?.obsToken = nil
                     }
                 }
-
             }
         }
     }

@@ -26,21 +26,21 @@ class PostViewModel {
         self.userName = NSAttributedString(string: userName, attributes: cachedAttributes.userNameAttr)
         self.commentOne = NSAttributedString(string: commentOne, attributes: cachedAttributes.commentAttr)
         self.commentTwo = NSAttributedString(string: commentTwo, attributes: cachedAttributes.commentAttr)
-        let dateLabelString = "posted \(cachedFormatter.string(from: date).lowercased())"
+        let dateLabelString = "posted \(cachedDateFormatter.string(from: date).lowercased())"
         self.date = NSAttributedString(string: dateLabelString, attributes: cachedAttributes.dateAttr)
     }
 }
 
-let cachedAttributes = PhotoPostCachedAttributes()
+let cachedAttributes = PostCachedAttributes()
 
-class PhotoPostCachedAttributes {
+class PostCachedAttributes {
     var topCommentsAttr: [NSAttributedString.Key:Any] = [.font:UIFont.systemFont(ofSize: 16, weight: .semibold)]
     var userNameAttr: [NSAttributedString.Key:Any] = [.font:UIFont.boldSystemFont(ofSize: 12)]
     var commentAttr: [NSAttributedString.Key:Any] = [.font:UIFont.systemFont(ofSize: 10, weight: .regular)]
     var dateAttr: [NSAttributedString.Key:Any] = [.font:UIFont.systemFont(ofSize: 12, weight: .light)]
 }
 
-let cachedFormatter:DateFormatter = {
+let cachedDateFormatter:DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .medium
     formatter.doesRelativeDateFormatting = true

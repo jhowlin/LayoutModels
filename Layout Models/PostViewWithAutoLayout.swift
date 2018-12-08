@@ -8,6 +8,8 @@
 
 import UIKit
 
+// A version of our Post View built using AutoLayout. This is used as the cell type in our 'Sizing Cell' approach.
+
 class PostCellWithAutoLayout:UITableViewCell {
     
     let postView = PostViewWithAutoLayout()
@@ -198,7 +200,7 @@ public class PostViewWithAutoLayout: UIView {
     }
     
     func setDate(date:Date) {
-        let dateString = cachedFormatter.string(from: date).lowercased()
+        let dateString = cachedDateFormatter.string(from: date).lowercased()
         let attrString = NSAttributedString(string: "posted \(dateString)", attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 12, weight: .light)])
         dateLabel.attributedText = attrString
         setNeedsLayout()

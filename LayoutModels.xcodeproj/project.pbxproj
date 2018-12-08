@@ -85,8 +85,8 @@
 		96BF7C5E219471FF001F4C25 /* Image Fetcher */ = {
 			isa = PBXGroup;
 			children = (
-				96BF7C652194721B001F4C25 /* ImageFetcherBaseOperation.swift */,
 				96BF7C642194721A001F4C25 /* ImageFetcherController.swift */,
+				96BF7C652194721B001F4C25 /* ImageFetcherBaseOperation.swift */,
 				96BF7C602194721A001F4C25 /* ImageFetcherDownloadOperation.swift */,
 				96BF7C5F2194721A001F4C25 /* ImageFetcherMetrics.swift */,
 				96BF7C662194721B001F4C25 /* ImageFetcherRenderOperation.swift */,
@@ -125,8 +125,8 @@
 		FC2DF8B620000B8B0078CE30 /* Layout Models */ = {
 			isa = PBXGroup;
 			children = (
-				FC9D8CAE21BABD7D00ECE123 /* Post Views and Cells */,
 				FC80BB572050B36A009B1D30 /* Posts Table View */,
+				FC9D8CAE21BABD7D00ECE123 /* Post Views and Cells */,
 				FC9D8CA821BABA7400ECE123 /* Data, View, and Layout Models */,
 				96A68F1B20D5543400BF4236 /* Helpers */,
 				96BF7C5E219471FF001F4C25 /* Image Fetcher */,

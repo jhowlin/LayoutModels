@@ -309,7 +309,7 @@ class PostsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         let model = postInfos[indexPath.row].viewModel
         let itemSize = layout.postedImageViewFrame.size.scaledForScreen
         let guid = model.guid
-        let sizeMetrics = ImageFetcherImageSizeMetrics.init(targetSize: itemSize, sourceSize: imageDownloadSize)
+        let sizeMetrics = ImageFetcherImageSizeMetrics(targetSize: itemSize, sourceSize: imageDownloadSize)
         let req = ImageFetcherRequest(url: model.imageURL, identifier: guid, isLowPriority:isLowPriority, sizeMetrics:sizeMetrics)
         return req
     }

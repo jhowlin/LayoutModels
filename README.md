@@ -35,13 +35,13 @@ Some features include:
 
 - A memory and disk cache
 - Decompression of images off of the main thread
-- Cancelation of downloads
+- Cancellation of downloads
 - Priority of downloads (useful for prefetching)
 - Throttling of concurrent downloads
 - Avoiding duplicate requests for same image
 - Ability to crop / scale images to a target size after download in a memory efficient way
-- Metrics reporting
 - Separate queues for downloads and rendering from disk
+- Metrics reporting
 
 ## Playground
 
@@ -49,4 +49,12 @@ The included Swift playground demonstrates the Layout Model pattern in an extrem
 
 ## Additional Resources
 
-Coming soon.
+[ModelingLayouts.pdf](Our TechPulse 2018 paper) about layout models.
+
+An [https://nshipster.com/image-resizing/](NSHipster article) that discusses various image resizing techniques and performance characteristics.
+
+[https://developer.apple.com/videos/play/wwdc2018/219/](Apple presentation) that covers background image decompressing
+
+
+
+
