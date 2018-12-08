@@ -49,11 +49,11 @@ The included Swift playground demonstrates the Layout Model pattern in an extrem
 
 ## Additional Resources
 
-[ModelingLayouts.pdf](Our TechPulse 2018 paper) about layout models.
+[Our TechPulse 2018 paper](ModelingLayouts.pdf) about layout models.
 
-An [https://nshipster.com/image-resizing/](NSHipster article) that discusses various image resizing techniques and performance characteristics.
+[An NSHipster article](https://nshipster.com/image-resizing/) that discusses various image resizing techniques and performance characteristics.
 
-[https://developer.apple.com/videos/play/wwdc2018/219/](Apple presentation) that covers background image decompressing
+[An Apple WWDC 2018 talk](https://developer.apple.com/videos/play/wwdc2018/219/) Apple presentation that covers background image decompressing
 
 
 
