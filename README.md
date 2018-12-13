@@ -51,7 +51,7 @@ The included Swift playground demonstrates the Layout Model pattern in an extrem
 
 [Our TechPulse 2018 paper](./Modeling%20Layouts.pdf) about layout models.
 
-Slides from our TechPulse 2018 presentation (coming soon).
+[Slides from our TechPulse 2018 presentation.] (./LayoutModelsSlides.pdf)
 
 [An NSHipster article](https://nshipster.com/image-resizing/) that discusses various image resizing techniques and performance characteristics.
 
