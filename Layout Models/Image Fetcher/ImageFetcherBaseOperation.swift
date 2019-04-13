@@ -7,48 +7,78 @@
 //
 
 import Foundation
-
+/*
+ Async operations require a subclass of Operation, and docs state you must override
+ - start()
+ - isAsynchronous
+ - isExecuting
+ - isFinished
+ 
+ These must be done in a synchronized and thread-safe manner
+ */
 class ImageFetcherBaseOperation:Operation {
     
-    func execute() { }
+    enum State {
+        case executing, finished, notTrackedYet
+    }
+    
+    func execute() {
+        fatalError("Subclasses must override this")
+    }
     
     override var isAsynchronous: Bool {
         return true
     }
     
-    fileprivate var _executing = false {
-        willSet {
-            willChangeValue(forKey: "isExecuting")
+    let queue = DispatchQueue(label: "com.howlin.opIsolationQueue", attributes:.concurrent)
+    
+    var state:State {
+        get {
+            return queue.sync {
+                unsafeInternalState
+            }
         }
-        didSet {
-            didChangeValue(forKey: "isExecuting")
+        set {
+            switch newValue {
+            case .executing:
+                willChangeValue(forKey: "isExecuting")
+            case .finished:
+                willChangeValue(forKey: "isFinished")
+            case .notTrackedYet:
+                break
+            }
+            
+            queue.sync(flags:.barrier) {
+                self.unsafeInternalState = newValue
+            }
+            
+            switch newValue {
+            case .executing:
+                didChangeValue(forKey: "isExecuting")
+            case .finished:
+                didChangeValue(forKey: "isFinished")
+            case .notTrackedYet:
+                break
+            }
         }
     }
+    
+    var unsafeInternalState:State = .notTrackedYet
     
     override var isExecuting: Bool {
-        return _executing
-    }
-    
-    fileprivate var _finished = false {
-        willSet {
-            willChangeValue(forKey: "isFinished")
-        }
-        didSet {
-            didChangeValue(forKey: "isFinished")
-        }
+        return state == .executing
     }
     
     override var isFinished: Bool {
-        return _finished
+        return state == .finished
     }
     
     override func start() {
-        _executing = true
+        state = .executing
         execute()
     }
     
     func finish() {
-        _executing = false
-        _finished = true
+        state = .finished
     }
 }
