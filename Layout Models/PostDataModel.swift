@@ -8,8 +8,12 @@
 
 import Foundation
 import UIKit
+import SwiftUI
+import Combine
 
-struct PostDataModel {
+class PostDataModel: BindableObject {
+    
+    let didChange = PassthroughSubject<PostDataModel, Never>()
     
     let comment:String
     let url:String
@@ -18,6 +22,11 @@ struct PostDataModel {
     let guid:String
     let commentOne:String
     let commentTwo:String
+    var image:UIImage? {
+        didSet {
+            didChange.send(self)
+        }
+    }
     
     static func createModel(imageURL:String) -> PostDataModel {
         let comment = String.arbitraryWords(random(from: 8, to: 30))
@@ -26,7 +35,18 @@ struct PostDataModel {
         let userName = String.arbitraryWords(3)
         let date = Date()
         let guid = UUID().uuidString
-        let post = PostDataModel(comment: comment, url: imageURL, userName:userName, date:date, guid:guid, commentOne:commentOne, commentTwo:commentTwo)
+        let post = PostDataModel(comment: comment, url: imageURL, userName:userName, date:date, guid:guid, commentOne:commentOne, commentTwo:commentTwo, image:nil)
         return post
+    }
+    
+    init(comment:String, url:String, userName:String, date:Date, guid:String, commentOne:String, commentTwo:String, image:UIImage?) {
+        self.comment = comment
+        self.url = url
+        self.userName = userName
+        self.date = date
+        self.guid = guid
+        self.commentOne = commentOne
+        self.commentTwo = commentTwo
+        self.image = image
     }
 }

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftUI
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,8 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let sizingCellFeed = PopoverAction(title: "Posts feed with sizing cell") { [weak self] in
             self?.onPostsSizingCell()
         }
+        
+        let swiftUI = PopoverAction(title: "Layout and async fetching using SwiftUI") { [weak self] in
+            self?.onSwiftUI()
+        }
 
-        vc.actions = [sizingCellFeed, layoutModelFeed]
+        vc.actions = [sizingCellFeed, layoutModelFeed, swiftUI]
         let navVC = UINavigationController(rootViewController: vc)
         window?.rootViewController = navVC
         window?.makeKeyAndVisible()
@@ -37,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let u = ImageFetcherController.shared.cachesURL
             print("\(u)")
         }
+
         return true
     }
     
@@ -49,6 +56,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func onPostsSizingCell() {
         
         let vc = PostsTableViewController(layoutMethod:.sizingCell)
+        (window!.rootViewController as! UINavigationController).pushViewController(vc, animated: true)
+    }
+    
+    func onSwiftUI() {
+        
+        let vc = UIHostingController(rootView: PostViewContainer(viewModel: PostContainerViewModel()))
         (window!.rootViewController as! UINavigationController).pushViewController(vc, animated: true)
     }
 }

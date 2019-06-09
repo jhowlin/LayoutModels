@@ -11,6 +11,7 @@
 		968804B620DE31EF00135695 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968804B520DE31EF00135695 /* Logger.swift */; };
 		968804B820DE353B00135695 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968804B720DE353B00135695 /* PostsTableViewController.swift */; };
 		96926CFA21B9451F0092EDF0 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96926CF921B9451F0092EDF0 /* PopoverViewController.swift */; };
+		96B4975322A957F100B3E84E /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B4975222A957F100B3E84E /* PostView.swift */; };
 		96BF7C672194721B001F4C25 /* ImageFetcherMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF7C5F2194721A001F4C25 /* ImageFetcherMetrics.swift */; };
 		96BF7C682194721B001F4C25 /* ImageFetcherDownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF7C602194721A001F4C25 /* ImageFetcherDownloadOperation.swift */; };
 		96BF7C692194721B001F4C25 /* ImageFetcherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF7C612194721A001F4C25 /* ImageFetcherRequest.swift */; };
@@ -36,6 +37,7 @@
 		968804B520DE31EF00135695 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		968804B720DE353B00135695 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		96926CF921B9451F0092EDF0 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		96B4975222A957F100B3E84E /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		96BF7C5F2194721A001F4C25 /* ImageFetcherMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherMetrics.swift; sourceTree = "<group>"; };
 		96BF7C602194721A001F4C25 /* ImageFetcherDownloadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherDownloadOperation.swift; sourceTree = "<group>"; };
 		96BF7C612194721A001F4C25 /* ImageFetcherRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherRequest.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		96B4975122A9578400B3E84E /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				96B4975222A957F100B3E84E /* PostView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		96BF7C5E219471FF001F4C25 /* Image Fetcher */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 		FC2DF8B620000B8B0078CE30 /* Layout Models */ = {
 			isa = PBXGroup;
 			children = (
+				96B4975122A9578400B3E84E /* SwiftUI */,
 				FC80BB572050B36A009B1D30 /* Posts Table View */,
 				FC9D8CAE21BABD7D00ECE123 /* Post Views and Cells */,
 				FC9D8CA821BABA7400ECE123 /* Data, View, and Layout Models */,
@@ -266,6 +277,7 @@
 				96BF7C672194721B001F4C25 /* ImageFetcherMetrics.swift in Sources */,
 				FC9D8CAA21BABAFA00ECE123 /* PostLayoutModel.swift in Sources */,
 				96BF7C6E2194721B001F4C25 /* ImageFetcherRenderOperation.swift in Sources */,
+				96B4975322A957F100B3E84E /* PostView.swift in Sources */,
 				96BF7C692194721B001F4C25 /* ImageFetcherRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,7 +415,7 @@
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 7PB5426XF4;
 				INFOPLIST_FILE = "$(SRCROOT)/Layout Models/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.howlin.LayoutModels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,7 +432,7 @@
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 7PB5426XF4;
 				INFOPLIST_FILE = "$(SRCROOT)/Layout Models/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.howlin.LayoutModels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
