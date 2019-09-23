@@ -12,12 +12,12 @@ import UIKit
 final class ImageFetcherDownloadOperation:ImageFetcherBaseOperation {
     
     var task : URLSessionDataTask?
-    let session:URLSession
+    var session:URLSession
     var request:ImageFetcherRequest
     var completion:((ImageOperationResult) -> ())
     let decompressor:Decompressor
     
-    init(session:URLSession, request:ImageFetcherRequest, decompressor:@escaping Decompressor = imageFetcherSimpleDecompressor, completion:@escaping (ImageOperationResult)->()) {
+    init(session:URLSession, request:ImageFetcherRequest, decompressor:@escaping Decompressor = rendererDecompressor, completion:@escaping (ImageOperationResult)->()) {
         self.session = session
         self.completion = completion
         self.request = request
@@ -32,8 +32,8 @@ final class ImageFetcherDownloadOperation:ImageFetcherBaseOperation {
         
         let urlRequest = URLRequest(url: url)
         
-        task = session.dataTask(with: urlRequest) { data, response, error in
-            
+        task = session.dataTask(with: urlRequest) { [weak self] data, response, error in
+            guard let self = self else { return }
             guard self.isCancelled == false else {
                 self.operationCancelled()
                 return

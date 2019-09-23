@@ -44,6 +44,18 @@ let imageFetcherSimpleDecompressor: Decompressor = { image in
     return decompressed ?? image
 }
 
+let rendererDecompressor:Decompressor = { image in
+    let renderer = UIGraphicsImageRenderer(size: image.size)
+    let decompressed = renderer.image { context in
+        image.draw(at: CGPoint.zero)
+    }
+    return decompressed
+}
+
+let noDecompressor:Decompressor = { image in
+    return image
+}
+
 func resizeImageByScalingAndCropping(imageData:Data, sourceSize:CGSize, targetSize:CGSize) -> UIImage? {
     
     var resized:UIImage? = nil

@@ -216,3 +216,5 @@ public class PostViewWithAutoLayout: UIView {
         return CGSize(width: size.width, height: height)
     }
 }
+
+

@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self?.onPostsSizingCell()
         }
         
-        let swiftUI = PopoverAction(title: "Layout and async fetching using SwiftUI") { [weak self] in
+        let swiftUI = PopoverAction(title: "Posts feed with SwiftUI") { [weak self] in
             self?.onSwiftUI()
         }
 

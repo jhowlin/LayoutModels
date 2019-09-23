@@ -23,14 +23,27 @@ class Logger:NSObject {
     var startCalculateModels = CFAbsoluteTimeGetCurrent()
     var startHeight = CFAbsoluteTimeGetCurrent()
     var startViewLoad = CFAbsoluteTimeGetCurrent()
+    var startTimes:[String:CFAbsoluteTime] = [:]
     
     static let shared:Logger = Logger()
 
     override init () {
         super.init()
     }
+    
+    public func beginTimingForIdentifier(_ id:String) {
+        guard startTimes[id] == nil else { fatalError() }
+        startTimes[id] = CFAbsoluteTimeGetCurrent()
+    }
+    
+    public func endTimingForIdentifier(_ id:String) {
+        guard let startTime = startTimes[id] else { fatalError() }
+        let duration = (CFAbsoluteTimeGetCurrent() - startTime) * 1000
+        log(logMessage:"Timing for id: \(id) took \(String(format: "%.2f", duration)) ms")
+        startTimes[id] = nil
+    }
 
-    func log(logMessage:String) {
+    public func log(logMessage:String) {
         if isRunningLaunchArgument(.logGeneral) {
             os_log("%{public}s", log: generalLogger, type: .info, logMessage)
         }

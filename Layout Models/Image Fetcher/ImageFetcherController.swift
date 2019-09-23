@@ -411,6 +411,21 @@ final public class ImageFetcherController {
         }
     }
     
+    public func cancelAll() {
+        isolationQueue.async {
+            for op in self.imageFetchQueue.operations {
+                (op as? ImageFetcherDownloadOperation).flatMap { $0.task?.cancel() }
+                op.cancel()
+            }
+            self.renderQueue.cancelAllOperations()
+            self.observers.removeAll()
+            
+            if self.shouldLogStatus {
+                self.logStatus()
+            }
+        }
+    }
+    
     func logStatus() {
         
         print("Observers: \(self.observers.count)")
@@ -420,5 +435,6 @@ final public class ImageFetcherController {
 
     deinit {
         print("Images controller deallocated...")
+        cancelAll()
     }
 }

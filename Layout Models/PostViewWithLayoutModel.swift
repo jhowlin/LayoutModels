@@ -16,7 +16,7 @@ class PostCellWithLayoutModel:UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(postView)
-        contentView.backgroundColor = .white
+        contentView.backgroundColor = .systemBackground
         selectionStyle = .none
     }
 
@@ -27,6 +27,13 @@ class PostCellWithLayoutModel:UITableViewCell {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension UIButton {
+    func setSystemImage(name:String) {
+        self.setImage(UIImage(systemName: name)?.withRenderingMode(.alwaysTemplate), for: [])
+        self.tintColor = .tertiaryLabel
     }
 }
 
@@ -69,7 +76,7 @@ public class PostViewWithLayoutModel: UIView {
 
         addSubview(optionsButton)
 
-        backgroundColor = UIColor.white
+        backgroundColor = .systemBackground
 
         let avatarImg = UIImage(named: "robyn.jpg")!
         avatarImageView.image = avatarImg
@@ -86,22 +93,22 @@ public class PostViewWithLayoutModel: UIView {
         addSubview(heartButton)
         addSubview(commentButton)
         addSubview(replyButton)
-        heartButton.setImage(UIImage(named:"heart.png"), for: [])
-        commentButton.setImage(UIImage(named:"comment.png"), for: [])
-        replyButton.setImage(UIImage(named:"reply.png"), for: [])
+        heartButton.setSystemImage(name: "heart")
+        commentButton.setSystemImage(name: "bubble.right")
+        replyButton.setSystemImage(name: "arrowshape.turn.up.left")
 
         commentOneLabel.numberOfLines = 0
         commentTwoLabel.numberOfLines = 0
         addSubview(commentOneLabel)
         addSubview(commentTwoLabel)
 
-        commentOneLabel.backgroundColor = .white
-        commentTwoLabel.backgroundColor = .white
-        postHeadlineLabel.backgroundColor = .white
-        userNameLabel.backgroundColor = .white
+//        commentOneLabel.backgroundColor = .white
+//        commentTwoLabel.backgroundColor = .white
+//        postHeadlineLabel.backgroundColor = .white
+//        userNameLabel.backgroundColor = .white
         postHeadlineLabel.numberOfLines = 0
         addSubview(postHeadlineLabel)
-        hairlineView.backgroundColor = UIColor.lightGray
+        hairlineView.backgroundColor = .tertiarySystemFill
         hairlineView.alpha = 0.3
         addSubview(hairlineView)
 

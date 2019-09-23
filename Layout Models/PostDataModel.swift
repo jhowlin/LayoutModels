@@ -11,9 +11,7 @@ import UIKit
 import SwiftUI
 import Combine
 
-class PostDataModel: BindableObject {
-    
-    let didChange = PassthroughSubject<PostDataModel, Never>()
+class PostDataModel: ObservableObject {
     
     let comment:String
     let url:String
@@ -22,11 +20,7 @@ class PostDataModel: BindableObject {
     let guid:String
     let commentOne:String
     let commentTwo:String
-    var image:UIImage? {
-        didSet {
-            didChange.send(self)
-        }
-    }
+    @Published var image:UIImage? 
     
     static func createModel(imageURL:String) -> PostDataModel {
         let comment = String.arbitraryWords(random(from: 8, to: 30))

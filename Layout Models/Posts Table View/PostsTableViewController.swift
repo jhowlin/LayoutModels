@@ -22,7 +22,7 @@ class PostsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var tableView = UITableView(frame: .zero, style: .plain)
     var loadingView = UIView(frame: .zero)
-    var loadingSpinner = UIActivityIndicatorView(style: .gray)
+    var loadingSpinner = UIActivityIndicatorView(style: .medium)
     let cellReuseID = "PostCell"
     let imageDownloadSize = CGSize(width: 800, height: 600)
     var postInfos:[PostViewInfo] = [] // used for manual layout mode

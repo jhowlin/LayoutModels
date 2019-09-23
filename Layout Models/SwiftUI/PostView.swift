@@ -17,28 +17,21 @@ extension PostDataModel: Identifiable {
     }
 }
 
-class PostContainerViewModel:BindableObject {
+class PostContainerViewModel:ObservableObject {
+    @Published var posts = PostContainerViewModel.createPosts()
     
     static func createPosts() -> [PostDataModel] {
-        let imageDownloadSize = CGSize(width: 400, height: 300)
+        let imageDownloadSize = CGSize(width: 750, height: 400)
         let url =
         "https://picsum.photos/\(Int(imageDownloadSize.width))/\(Int(imageDownloadSize.height))/?random"
         let numItems = 30
         return (0..<numItems).map { _ in return PostDataModel.createModel(imageURL: url)}
     }
-    
-    var posts:[PostDataModel] = PostContainerViewModel.createPosts() {
-        didSet {
-            didChange.send(self)
-        }
-    }
-    
-    let didChange = PassthroughSubject<PostContainerViewModel, Never>()
 }
 
 struct PostViewContainer: View {
     
-    @ObjectBinding var viewModel:PostContainerViewModel
+    @ObservedObject var viewModel:PostContainerViewModel
 
     var body: some View {
         
@@ -69,7 +62,7 @@ struct PostViewContainer: View {
 
 struct PostView : View {
     
-    @ObjectBinding var post:PostDataModel
+    @ObservedObject var post:PostDataModel
     
     var body: some View {
         VStack(alignment:.leading) {
@@ -103,11 +96,33 @@ struct PostView : View {
             }
             Text(post.comment)
                 .lineLimit(nil)
+                .fixedSize(horizontal: false, vertical: true)
                 .font(.headline)
-            Text(post.commentOne).lineLimit(nil).font(.caption).padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
-            Text(post.commentTwo).lineLimit(nil).font(.caption).padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
+            Text(post.commentOne)
+                .lineLimit(nil)
+                .fixedSize(horizontal: false, vertical: true)
+                .font(.caption)
+                .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
+            Text(post.commentTwo)
+                .lineLimit(nil)
+                .fixedSize(horizontal: false, vertical: true)
+                .font(.caption)
+                .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
         }
     }
 }
 
-
+class HostingCell: UITableViewCell {
+    var hostingController:UIHostingController<PostView>? {
+        didSet {
+            let view = self.hostingController!.view!
+            addSubview(view)
+            view.translatesAutoresizingMaskIntoConstraints = false
+            view.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+            view.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+            view.topAnchor.constraint(equalTo: topAnchor).isActive = true
+            view.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+            
+        }
+    }
+}

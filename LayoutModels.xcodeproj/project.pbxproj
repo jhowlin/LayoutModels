@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9632DA0D22D9E19800B4143D /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9632DA0C22D9E19800B4143D /* NetworkingManager.swift */; };
+		9632DA0F22DB463900B4143D /* sampleImageURLs.data in Resources */ = {isa = PBXBuildFile; fileRef = 9632DA0E22DB463900B4143D /* sampleImageURLs.data */; };
 		9649522C219069C5001CAB79 /* PostDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9649522B219069C5001CAB79 /* PostDataModel.swift */; };
+		9653C6CD22D885410047B762 /* DownloadTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9653C6CC22D885410047B762 /* DownloadTestingViewController.swift */; };
 		968804B620DE31EF00135695 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968804B520DE31EF00135695 /* Logger.swift */; };
 		968804B820DE353B00135695 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968804B720DE353B00135695 /* PostsTableViewController.swift */; };
 		96926CFA21B9451F0092EDF0 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96926CF921B9451F0092EDF0 /* PopoverViewController.swift */; };
@@ -33,7 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9632DA0C22D9E19800B4143D /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		9632DA0E22DB463900B4143D /* sampleImageURLs.data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleImageURLs.data; sourceTree = "<group>"; };
 		9649522B219069C5001CAB79 /* PostDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataModel.swift; sourceTree = "<group>"; };
+		9653C6CC22D885410047B762 /* DownloadTestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTestingViewController.swift; sourceTree = "<group>"; };
 		968804B520DE31EF00135695 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		968804B720DE353B00135695 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		96926CF921B9451F0092EDF0 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +96,16 @@
 				96B4975222A957F100B3E84E /* PostView.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		96BDB0782338CB7600FF0CE6 /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				9632DA0E22DB463900B4143D /* sampleImageURLs.data */,
+				9653C6CC22D885410047B762 /* DownloadTestingViewController.swift */,
+				9632DA0C22D9E19800B4143D /* NetworkingManager.swift */,
+			);
+			path = Unused;
 			sourceTree = "<group>";
 		};
 		96BF7C5E219471FF001F4C25 /* Image Fetcher */ = {
@@ -168,6 +184,7 @@
 		FC9D8CAD21BABBDA00ECE123 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				96BDB0782338CB7600FF0CE6 /* Unused */,
 				FC2DF8D720000BFE0078CE30 /* Images.xcassets */,
 				FC2DF8BE20000B8B0078CE30 /* Assets.xcassets */,
 				FC2DF8C020000B8B0078CE30 /* LaunchScreen.storyboard */,
@@ -249,6 +266,7 @@
 				FC2DF8EB20000D370078CE30 /* Images.xcassets in Resources */,
 				FC2DF8C220000B8B0078CE30 /* LaunchScreen.storyboard in Resources */,
 				FC2DF8BF20000B8B0078CE30 /* Assets.xcassets in Resources */,
+				9632DA0F22DB463900B4143D /* sampleImageURLs.data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +284,7 @@
 				968804B820DE353B00135695 /* PostsTableViewController.swift in Sources */,
 				96BF7C6A2194721B001F4C25 /* UIImageView+ImageFetcherController.swift in Sources */,
 				FC9D8CAC21BABB3A00ECE123 /* PostViewModel.swift in Sources */,
+				9632DA0D22D9E19800B4143D /* NetworkingManager.swift in Sources */,
 				FC2DF8E020000C4A0078CE30 /* StringMeasuring.swift in Sources */,
 				FC80BB592050B39E009B1D30 /* PostViewWithAutoLayout.swift in Sources */,
 				96BF7C682194721B001F4C25 /* ImageFetcherDownloadOperation.swift in Sources */,
@@ -276,6 +295,7 @@
 				FC2DF8DA20000C020078CE30 /* AppDelegate.swift in Sources */,
 				96BF7C672194721B001F4C25 /* ImageFetcherMetrics.swift in Sources */,
 				FC9D8CAA21BABAFA00ECE123 /* PostLayoutModel.swift in Sources */,
+				9653C6CD22D885410047B762 /* DownloadTestingViewController.swift in Sources */,
 				96BF7C6E2194721B001F4C25 /* ImageFetcherRenderOperation.swift in Sources */,
 				96B4975322A957F100B3E84E /* PostView.swift in Sources */,
 				96BF7C692194721B001F4C25 /* ImageFetcherRequest.swift in Sources */,
