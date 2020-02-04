@@ -3,23 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9646B49423E8EE1600D2FC34 /* ImageFetcherController in Frameworks */ = {isa = PBXBuildFile; productRef = 9646B49323E8EE1600D2FC34 /* ImageFetcherController */; };
 		9649522C219069C5001CAB79 /* PostDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9649522B219069C5001CAB79 /* PostDataModel.swift */; };
 		968804B620DE31EF00135695 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968804B520DE31EF00135695 /* Logger.swift */; };
 		968804B820DE353B00135695 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968804B720DE353B00135695 /* PostsTableViewController.swift */; };
 		96926CFA21B9451F0092EDF0 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96926CF921B9451F0092EDF0 /* PopoverViewController.swift */; };
 		96B4975322A957F100B3E84E /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B4975222A957F100B3E84E /* PostView.swift */; };
-		96BF7C672194721B001F4C25 /* ImageFetcherMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF7C5F2194721A001F4C25 /* ImageFetcherMetrics.swift */; };
-		96BF7C682194721B001F4C25 /* ImageFetcherDownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF7C602194721A001F4C25 /* ImageFetcherDownloadOperation.swift */; };
-		96BF7C692194721B001F4C25 /* ImageFetcherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF7C612194721A001F4C25 /* ImageFetcherRequest.swift */; };
-		96BF7C6A2194721B001F4C25 /* UIImageView+ImageFetcherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF7C622194721A001F4C25 /* UIImageView+ImageFetcherController.swift */; };
-		96BF7C6B2194721B001F4C25 /* ImageFetcherResizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF7C632194721A001F4C25 /* ImageFetcherResizing.swift */; };
-		96BF7C6C2194721B001F4C25 /* ImageFetcherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF7C642194721A001F4C25 /* ImageFetcherController.swift */; };
-		96BF7C6D2194721B001F4C25 /* ImageFetcherBaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF7C652194721B001F4C25 /* ImageFetcherBaseOperation.swift */; };
-		96BF7C6E2194721B001F4C25 /* ImageFetcherRenderOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF7C662194721B001F4C25 /* ImageFetcherRenderOperation.swift */; };
 		FC2DF8BF20000B8B0078CE30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2DF8BE20000B8B0078CE30 /* Assets.xcassets */; };
 		FC2DF8C220000B8B0078CE30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2DF8C020000B8B0078CE30 /* LaunchScreen.storyboard */; };
 		FC2DF8DA20000C020078CE30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DF8C920000BF90078CE30 /* AppDelegate.swift */; };
@@ -38,14 +31,6 @@
 		968804B720DE353B00135695 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		96926CF921B9451F0092EDF0 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		96B4975222A957F100B3E84E /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
-		96BF7C5F2194721A001F4C25 /* ImageFetcherMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherMetrics.swift; sourceTree = "<group>"; };
-		96BF7C602194721A001F4C25 /* ImageFetcherDownloadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherDownloadOperation.swift; sourceTree = "<group>"; };
-		96BF7C612194721A001F4C25 /* ImageFetcherRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherRequest.swift; sourceTree = "<group>"; };
-		96BF7C622194721A001F4C25 /* UIImageView+ImageFetcherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageFetcherController.swift"; sourceTree = "<group>"; };
-		96BF7C632194721A001F4C25 /* ImageFetcherResizing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherResizing.swift; sourceTree = "<group>"; };
-		96BF7C642194721A001F4C25 /* ImageFetcherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherController.swift; sourceTree = "<group>"; };
-		96BF7C652194721B001F4C25 /* ImageFetcherBaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherBaseOperation.swift; sourceTree = "<group>"; };
-		96BF7C662194721B001F4C25 /* ImageFetcherRenderOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcherRenderOperation.swift; sourceTree = "<group>"; };
 		96BF7C7021999659001F4C25 /* TechPulsePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TechPulsePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FC2DF8B420000B8B0078CE30 /* LayoutModels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayoutModels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2DF8BE20000B8B0078CE30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9646B49423E8EE1600D2FC34 /* ImageFetcherController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,21 +76,6 @@
 				96B4975222A957F100B3E84E /* PostView.swift */,
 			);
 			path = SwiftUI;
-			sourceTree = "<group>";
-		};
-		96BF7C5E219471FF001F4C25 /* Image Fetcher */ = {
-			isa = PBXGroup;
-			children = (
-				96BF7C642194721A001F4C25 /* ImageFetcherController.swift */,
-				96BF7C652194721B001F4C25 /* ImageFetcherBaseOperation.swift */,
-				96BF7C602194721A001F4C25 /* ImageFetcherDownloadOperation.swift */,
-				96BF7C5F2194721A001F4C25 /* ImageFetcherMetrics.swift */,
-				96BF7C662194721B001F4C25 /* ImageFetcherRenderOperation.swift */,
-				96BF7C612194721A001F4C25 /* ImageFetcherRequest.swift */,
-				96BF7C632194721A001F4C25 /* ImageFetcherResizing.swift */,
-				96BF7C622194721A001F4C25 /* UIImageView+ImageFetcherController.swift */,
-			);
-			path = "Image Fetcher";
 			sourceTree = "<group>";
 		};
 		96BF7C6F21999613001F4C25 /* Playground */ = {
@@ -140,7 +111,6 @@
 				FC9D8CAE21BABD7D00ECE123 /* Post Views and Cells */,
 				FC9D8CA821BABA7400ECE123 /* Data, View, and Layout Models */,
 				96A68F1B20D5543400BF4236 /* Helpers */,
-				96BF7C5E219471FF001F4C25 /* Image Fetcher */,
 				FC9D8CAD21BABBDA00ECE123 /* Application */,
 				FCF700D921BAE07F00E802C5 /* README.md */,
 			);
@@ -202,6 +172,9 @@
 			dependencies = (
 			);
 			name = LayoutModels;
+			packageProductDependencies = (
+				9646B49323E8EE1600D2FC34 /* ImageFetcherController */,
+			);
 			productName = Feed;
 			productReference = FC2DF8B420000B8B0078CE30 /* LayoutModels.app */;
 			productType = "com.apple.product-type.application";
@@ -232,6 +205,9 @@
 				Base,
 			);
 			mainGroup = FC2DF8AB20000B8B0078CE30;
+			packageReferences = (
+				9646B49223E8EE1600D2FC34 /* XCRemoteSwiftPackageReference "ImageFetcherController" */,
+			);
 			productRefGroup = FC2DF8B520000B8B0078CE30 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -262,23 +238,15 @@
 				96926CFA21B9451F0092EDF0 /* PopoverViewController.swift in Sources */,
 				968804B620DE31EF00135695 /* Logger.swift in Sources */,
 				9649522C219069C5001CAB79 /* PostDataModel.swift in Sources */,
-				96BF7C6D2194721B001F4C25 /* ImageFetcherBaseOperation.swift in Sources */,
 				968804B820DE353B00135695 /* PostsTableViewController.swift in Sources */,
-				96BF7C6A2194721B001F4C25 /* UIImageView+ImageFetcherController.swift in Sources */,
 				FC9D8CAC21BABB3A00ECE123 /* PostViewModel.swift in Sources */,
 				FC2DF8E020000C4A0078CE30 /* StringMeasuring.swift in Sources */,
 				FC80BB592050B39E009B1D30 /* PostViewWithAutoLayout.swift in Sources */,
-				96BF7C682194721B001F4C25 /* ImageFetcherDownloadOperation.swift in Sources */,
 				FC2DF8DD20000C020078CE30 /* Arbitrary.swift in Sources */,
-				96BF7C6C2194721B001F4C25 /* ImageFetcherController.swift in Sources */,
-				96BF7C6B2194721B001F4C25 /* ImageFetcherResizing.swift in Sources */,
 				FC9D8CB021BABDA800ECE123 /* PostViewWithLayoutModel.swift in Sources */,
 				FC2DF8DA20000C020078CE30 /* AppDelegate.swift in Sources */,
-				96BF7C672194721B001F4C25 /* ImageFetcherMetrics.swift in Sources */,
 				FC9D8CAA21BABAFA00ECE123 /* PostLayoutModel.swift in Sources */,
-				96BF7C6E2194721B001F4C25 /* ImageFetcherRenderOperation.swift in Sources */,
 				96B4975322A957F100B3E84E /* PostView.swift in Sources */,
-				96BF7C692194721B001F4C25 /* ImageFetcherRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +370,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -416,7 +385,10 @@
 				DEVELOPMENT_TEAM = 7PB5426XF4;
 				INFOPLIST_FILE = "$(SRCROOT)/Layout Models/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.howlin.LayoutModels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -433,7 +405,10 @@
 				DEVELOPMENT_TEAM = 7PB5426XF4;
 				INFOPLIST_FILE = "$(SRCROOT)/Layout Models/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.howlin.LayoutModels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -463,6 +438,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9646B49223E8EE1600D2FC34 /* XCRemoteSwiftPackageReference "ImageFetcherController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:jhowlin/ImageFetcherController.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9646B49323E8EE1600D2FC34 /* ImageFetcherController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9646B49223E8EE1600D2FC34 /* XCRemoteSwiftPackageReference "ImageFetcherController" */;
+			productName = ImageFetcherController;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FC2DF8AC20000B8B0078CE30 /* Project object */;
 }

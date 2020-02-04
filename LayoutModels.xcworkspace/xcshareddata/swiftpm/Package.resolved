@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ImageFetcherController",
+        "repositoryURL": "git@github.com:jhowlin/ImageFetcherController.git",
+        "state": {
+          "branch": "master",
+          "revision": "c7c4fef8b4ea5a504b00ff4beb57c0d8c558cee9",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

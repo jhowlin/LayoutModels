@@ -8,7 +8,7 @@
 
 import UIKit
 import SwiftUI
-
+import ImageFetcherController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

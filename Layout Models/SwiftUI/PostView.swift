@@ -10,6 +10,7 @@ import SwiftUI
 import Foundation
 import Combine
 import UIKit
+import ImageFetcherController
 
 extension PostDataModel: Identifiable {
     var id:String {

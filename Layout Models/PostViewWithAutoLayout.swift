@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ImageFetcherController
 
 // A version of our Post View built using AutoLayout. This is used as the cell type in our 'Sizing Cell' approach.
 

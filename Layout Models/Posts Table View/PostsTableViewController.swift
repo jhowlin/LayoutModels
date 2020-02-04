@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ImageFetcherController
 
 enum LayoutMethod:String {
     case layoutModel = "Layout Model", sizingCell = "Sizing Cell"
