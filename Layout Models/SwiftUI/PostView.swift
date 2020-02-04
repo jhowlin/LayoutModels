@@ -79,7 +79,6 @@ struct PostView : View {
             if post.image != nil {
                 Image(uiImage: post.image!)
                     .resizable()
-                    .scaledToFill()
                     .frame(height: 200.0, alignment:.top)
                     .clipped()
             } else {
@@ -88,11 +87,12 @@ struct PostView : View {
                     .foregroundColor(.gray)
             }
             HStack {
-                Image("heart").resizable().aspectRatio(nil, contentMode:.fill).frame(width:23, height:23)
-                Image("comment").resizable().aspectRatio(nil, contentMode:.fill).frame(width:23, height:23)
-                Image("reply").resizable().aspectRatio(nil, contentMode:.fill).frame(width:23, height:23)
+                
+                Image(systemName: "heart").resizable().aspectRatio(nil, contentMode:.fill).frame(width:17, height:17).padding([.trailing, .top], 7)
+                Image(systemName:"bubble.right").resizable().aspectRatio(nil, contentMode:.fill).frame(width:17, height:17).padding([.trailing, .top], 7)
+                Image(systemName:"arrowshape.turn.up.left").resizable().aspectRatio(nil, contentMode:.fill).frame(width:17, height:17).padding([.trailing, .top], 7)
                 Spacer()
-                Text("posted today").font(.caption)
+                Text("posted today").font(.caption).fixedSize(horizontal: false, vertical: true)
             }
             Text(post.comment)
                 .lineLimit(nil)
