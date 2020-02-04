@@ -112,18 +112,3 @@ struct PostView : View {
         }
     }
 }
-
-class HostingCell: UITableViewCell {
-    var hostingController:UIHostingController<PostView>? {
-        didSet {
-            let view = self.hostingController!.view!
-            addSubview(view)
-            view.translatesAutoresizingMaskIntoConstraints = false
-            view.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-            view.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-            view.topAnchor.constraint(equalTo: topAnchor).isActive = true
-            view.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-            
-        }
-    }
-}
