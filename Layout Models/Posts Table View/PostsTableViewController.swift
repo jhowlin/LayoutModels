@@ -69,7 +69,7 @@ class PostsTableViewController: UIViewController, UITableViewDelegate, UITableVi
             tableView.register(PostCellWithLayoutModel.self, forCellReuseIdentifier: cellReuseID)
             loadingView.translatesAutoresizingMaskIntoConstraints = false
             loadingSpinner.translatesAutoresizingMaskIntoConstraints = false
-            loadingView.backgroundColor = .white
+            loadingView.backgroundColor = .systemBackground
             loadingSpinner.startAnimating()
             view.addSubview(loadingView)
             loadingView.addSubview(loadingSpinner)

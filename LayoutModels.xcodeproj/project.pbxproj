@@ -3,16 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9646B49423E8EE1600D2FC34 /* ImageFetcherController in Frameworks */ = {isa = PBXBuildFile; productRef = 9646B49323E8EE1600D2FC34 /* ImageFetcherController */; };
+		961F4591292CF5BD003F5BC6 /* ImageFetcherController in Frameworks */ = {isa = PBXBuildFile; productRef = 961F4590292CF5BD003F5BC6 /* ImageFetcherController */; };
 		9649522C219069C5001CAB79 /* PostDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9649522B219069C5001CAB79 /* PostDataModel.swift */; };
 		968804B620DE31EF00135695 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968804B520DE31EF00135695 /* Logger.swift */; };
 		968804B820DE353B00135695 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968804B720DE353B00135695 /* PostsTableViewController.swift */; };
 		96926CFA21B9451F0092EDF0 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96926CF921B9451F0092EDF0 /* PopoverViewController.swift */; };
-		96B4975322A957F100B3E84E /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B4975222A957F100B3E84E /* PostView.swift */; };
 		FC2DF8BF20000B8B0078CE30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2DF8BE20000B8B0078CE30 /* Assets.xcassets */; };
 		FC2DF8C220000B8B0078CE30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2DF8C020000B8B0078CE30 /* LaunchScreen.storyboard */; };
 		FC2DF8DA20000C020078CE30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DF8C920000BF90078CE30 /* AppDelegate.swift */; };
@@ -30,7 +29,6 @@
 		968804B520DE31EF00135695 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		968804B720DE353B00135695 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		96926CF921B9451F0092EDF0 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
-		96B4975222A957F100B3E84E /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		96BF7C7021999659001F4C25 /* TechPulsePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TechPulsePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FC2DF8B420000B8B0078CE30 /* LayoutModels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayoutModels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2DF8BE20000B8B0078CE30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9646B49423E8EE1600D2FC34 /* ImageFetcherController in Frameworks */,
+				961F4591292CF5BD003F5BC6 /* ImageFetcherController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,14 +66,6 @@
 				96926CF921B9451F0092EDF0 /* PopoverViewController.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		96B4975122A9578400B3E84E /* SwiftUI */ = {
-			isa = PBXGroup;
-			children = (
-				96B4975222A957F100B3E84E /* PostView.swift */,
-			);
-			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		96BF7C6F21999613001F4C25 /* Playground */ = {
@@ -106,7 +96,6 @@
 		FC2DF8B620000B8B0078CE30 /* Layout Models */ = {
 			isa = PBXGroup;
 			children = (
-				96B4975122A9578400B3E84E /* SwiftUI */,
 				FC80BB572050B36A009B1D30 /* Posts Table View */,
 				FC9D8CAE21BABD7D00ECE123 /* Post Views and Cells */,
 				FC9D8CA821BABA7400ECE123 /* Data, View, and Layout Models */,
@@ -173,7 +162,7 @@
 			);
 			name = LayoutModels;
 			packageProductDependencies = (
-				9646B49323E8EE1600D2FC34 /* ImageFetcherController */,
+				961F4590292CF5BD003F5BC6 /* ImageFetcherController */,
 			);
 			productName = Feed;
 			productReference = FC2DF8B420000B8B0078CE30 /* LayoutModels.app */;
@@ -186,7 +175,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1410;
 				ORGANIZATIONNAME = Howlin;
 				TargetAttributes = {
 					FC2DF8B320000B8B0078CE30 = {
@@ -197,7 +186,7 @@
 				};
 			};
 			buildConfigurationList = FC2DF8AF20000B8B0078CE30 /* Build configuration list for PBXProject "LayoutModels" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -206,7 +195,7 @@
 			);
 			mainGroup = FC2DF8AB20000B8B0078CE30;
 			packageReferences = (
-				9646B49223E8EE1600D2FC34 /* XCRemoteSwiftPackageReference "ImageFetcherController" */,
+				961F458F292CF5BD003F5BC6 /* XCRemoteSwiftPackageReference "ImageFetcherController-Public" */,
 			);
 			productRefGroup = FC2DF8B520000B8B0078CE30 /* Products */;
 			projectDirPath = "";
@@ -246,7 +235,6 @@
 				FC9D8CB021BABDA800ECE123 /* PostViewWithLayoutModel.swift in Sources */,
 				FC2DF8DA20000C020078CE30 /* AppDelegate.swift in Sources */,
 				FC9D8CAA21BABAFA00ECE123 /* PostLayoutModel.swift in Sources */,
-				96B4975322A957F100B3E84E /* PostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +277,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -314,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -348,6 +337,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -367,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -384,7 +374,7 @@
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 7PB5426XF4;
 				INFOPLIST_FILE = "$(SRCROOT)/Layout Models/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,7 +394,7 @@
 				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 7PB5426XF4;
 				INFOPLIST_FILE = "$(SRCROOT)/Layout Models/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,20 +430,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9646B49223E8EE1600D2FC34 /* XCRemoteSwiftPackageReference "ImageFetcherController" */ = {
+		961F458F292CF5BD003F5BC6 /* XCRemoteSwiftPackageReference "ImageFetcherController-Public" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:jhowlin/ImageFetcherController.git";
+			repositoryURL = "https://github.com/jhowlin/ImageFetcherController-Public";
 			requirement = {
-				branch = master;
+				branch = main;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9646B49323E8EE1600D2FC34 /* ImageFetcherController */ = {
+		961F4590292CF5BD003F5BC6 /* ImageFetcherController */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9646B49223E8EE1600D2FC34 /* XCRemoteSwiftPackageReference "ImageFetcherController" */;
+			package = 961F458F292CF5BD003F5BC6 /* XCRemoteSwiftPackageReference "ImageFetcherController-Public" */;
 			productName = ImageFetcherController;
 		};
 /* End XCSwiftPackageProductDependency section */

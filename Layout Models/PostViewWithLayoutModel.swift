@@ -86,7 +86,6 @@ public class PostViewWithLayoutModel: UIView {
         avatarImageView.layer.cornerRadius = 15
         avatarImageView.layer.masksToBounds = true
 
-
         addSubview(postedImageView)
         postedImageView.clipsToBounds = false
 
@@ -102,10 +101,6 @@ public class PostViewWithLayoutModel: UIView {
         addSubview(commentOneLabel)
         addSubview(commentTwoLabel)
 
-//        commentOneLabel.backgroundColor = .white
-//        commentTwoLabel.backgroundColor = .white
-//        postHeadlineLabel.backgroundColor = .white
-//        userNameLabel.backgroundColor = .white
         postHeadlineLabel.numberOfLines = 0
         addSubview(postHeadlineLabel)
         hairlineView.backgroundColor = .tertiarySystemFill

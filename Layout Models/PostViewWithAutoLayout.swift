@@ -56,15 +56,12 @@ public class PostViewWithAutoLayout: UIView {
         userNameLabel.text = "robyncolon"
         userNameLabel.font = UIFont.boldSystemFont(ofSize: 12)
         optionsButton.setTitle("...", for: [])
-        optionsButton.setTitleColor(UIColor.black, for: [])
         optionsButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        optionsButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 8, right: 0)
         optionsButton.translatesAutoresizingMaskIntoConstraints = false
 
         super.init(frame: .zero)
 
         addSubview(userNameLabel)
-        backgroundColor = UIColor.white
         let avatarImg = UIImage(named: "robyn.jpg")!
         avatarImageView.image = avatarImg
         
@@ -78,9 +75,9 @@ public class PostViewWithAutoLayout: UIView {
         postedImageView.contentMode = .scaleAspectFill
         postedImageView.clipsToBounds = true
 
-        heartButton.setImage(UIImage(named:"heart.png"), for: [])
-        commentButton.setImage(UIImage(named:"comment.png"), for: [])
-        replyButton.setImage(UIImage(named:"reply.png"), for: [])
+        heartButton.setSystemImage(name: "heart")
+        commentButton.setSystemImage(name: "bubble.right")
+        replyButton.setSystemImage(name: "arrowshape.turn.up.left")
         
         avatarImageView.translatesAutoresizingMaskIntoConstraints = false
         postedImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -177,32 +174,32 @@ public class PostViewWithAutoLayout: UIView {
 
     func setTopComment(comment:String) {
         
-        let attrString = NSAttributedString(string: comment, attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 16, weight: .semibold)])
+        let attrString = NSAttributedString(string: comment, attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 16, weight: .semibold), .foregroundColor: UIColor.label])
         postHeadlineLabel.attributedText = attrString
         setNeedsLayout()
     }
     
     func setUserName(userName:String) {
-        let attrString = NSAttributedString(string: userName, attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 12, weight: .bold)])
+        let attrString = NSAttributedString(string: userName, attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 12, weight: .bold), .foregroundColor: UIColor.label])
         userNameLabel.attributedText = attrString
         setNeedsLayout()
     }
     
     func setCommentOne(comment:String) {
-        let attrString = NSAttributedString(string: comment, attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 10, weight: .regular)])
+        let attrString = NSAttributedString(string: comment, attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 10, weight: .regular), .foregroundColor: UIColor.label])
         commentOneLabel.attributedText = attrString
         setNeedsLayout()
     }
     
     func setCommentTwo(comment:String) {
-        let attrString = NSAttributedString(string: comment, attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 10, weight: .regular)])
+        let attrString = NSAttributedString(string: comment, attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 10, weight: .regular), .foregroundColor: UIColor.label])
         commentTwoLabel.attributedText = attrString
         setNeedsLayout()
     }
     
     func setDate(date:Date) {
         let dateString = cachedDateFormatter.string(from: date).lowercased()
-        let attrString = NSAttributedString(string: "posted \(dateString)", attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 12, weight: .light)])
+        let attrString = NSAttributedString(string: "posted \(dateString)", attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 12, weight: .light), .foregroundColor: UIColor.label])
         dateLabel.attributedText = attrString
         setNeedsLayout()
     }

@@ -25,16 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let layoutModelFeed = PopoverAction(title: "Posts feed with layout model") { [weak self] in
             self?.onPostsFeedLayoutModel()
         }
-        
+
         let sizingCellFeed = PopoverAction(title: "Posts feed with sizing cell") { [weak self] in
             self?.onPostsSizingCell()
         }
-        
-        let swiftUI = PopoverAction(title: "Posts feed with SwiftUI") { [weak self] in
-            self?.onSwiftUI()
-        }
 
-        vc.actions = [sizingCellFeed, layoutModelFeed, swiftUI]
+        vc.actions = [sizingCellFeed, layoutModelFeed]
         let navVC = UINavigationController(rootViewController: vc)
         window?.rootViewController = navVC
         window?.makeKeyAndVisible()
@@ -46,22 +42,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
-    
+
     func onPostsFeedLayoutModel() {
-        
+
         let vc = PostsTableViewController(layoutMethod:.layoutModel)
         (window!.rootViewController as! UINavigationController).pushViewController(vc, animated: true)
     }
-    
+
     func onPostsSizingCell() {
-        
+
         let vc = PostsTableViewController(layoutMethod:.sizingCell)
-        (window!.rootViewController as! UINavigationController).pushViewController(vc, animated: true)
-    }
-    
-    func onSwiftUI() {
-        
-        let vc = UIHostingController(rootView: PostViewContainer(viewModel: PostContainerViewModel()))
         (window!.rootViewController as! UINavigationController).pushViewController(vc, animated: true)
     }
 }

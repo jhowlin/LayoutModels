@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "imagefetchercontroller-public",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jhowlin/ImageFetcherController-Public",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7cd5d0b16baa06e8ca9dd6e309f23ba8eda75fec"
+      }
+    }
+  ],
+  "version" : 2
+}
